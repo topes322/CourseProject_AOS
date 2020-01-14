@@ -1,0 +1,8 @@
+D:\Саша\5 семестр\CP_AOS\course_projAOS\client\bin\Debug\client.exe.config
+D:\Саша\5 семестр\CP_AOS\course_projAOS\client\bin\Debug\client.exe
+D:\Саша\5 семестр\CP_AOS\course_projAOS\client\bin\Debug\client.pdb
+D:\Саша\5 семестр\CP_AOS\course_projAOS\client\bin\Debug\Extreme.Numerics.dll
+D:\Саша\5 семестр\CP_AOS\course_projAOS\client\obj\Debug\client.csprojAssemblyReference.cache
+D:\Саша\5 семестр\CP_AOS\course_projAOS\client\obj\Debug\client.csproj.CopyComplete
+D:\Саша\5 семестр\CP_AOS\course_projAOS\client\obj\Debug\client.exe
+D:\Саша\5 семестр\CP_AOS\course_projAOS\client\obj\Debug\client.pdb

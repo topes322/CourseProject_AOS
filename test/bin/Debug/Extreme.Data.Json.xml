@@ -1,0 +1,771 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Extreme.Data.Json</name>
+  </assembly>
+  <members>
+    <member name="T:Extreme.Data.Json.ComplexConverter`1">
+      <summary>
+            Converts complex numbers to and from JSON.
+            </summary>
+      <typeparam name="T">The type of the real and imaginary parts of the complex number.</typeparam>
+    </member>
+    <member name="M:Extreme.Data.Json.ComplexConverter`1.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Extreme.Data.Json.ComplexConverter`1</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Extreme.Data.Json.ComplexConverter`1.CanConvert(System.Type)">
+      <summary>
+            Returns whether the object can convert objects of the specified type.
+            </summary>
+      <param name="objectType">The type of the objects</param>
+      <returns>
+        <see langword="true" /> if the object can convert objects
+            of type <paramref name="objectType" />; otherwise <see langword="false" />.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.ComplexConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+      <summary>
+            Deserializes an object from JSON format.
+            </summary>
+      <param name="reader">The reader that contains the JSON.</param>
+      <param name="objectType">The type of the object to deserialize.</param>
+      <param name="existingValue">The pre-existing value of the object. Not used.</param>
+      <param name="serializer">The JSON serializer to use for the deserialization.</param>
+      <returns></returns>
+    </member>
+    <member name="M:Extreme.Data.Json.ComplexConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+      <summary>
+            Serializes an object to JSON.
+            </summary>
+      <param name="writer">The writer the serialized JSON is written to.</param>
+      <param name="value">The value to serialize.</param>
+      <param name="serializer">The JSON serializer to use for the serialization.</param>
+    </member>
+    <member name="T:Extreme.Data.Json.ComplexJsonConverter">
+      <summary>
+            Converts complex numbers to and from JSON.
+            </summary>
+    </member>
+    <member name="M:Extreme.Data.Json.ComplexJsonConverter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Extreme.Data.Json.ComplexJsonConverter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Extreme.Data.Json.ComplexJsonConverter.CanConvert(System.Type)">
+      <summary>
+            Returns whether the object can convert objects of the specified type.
+            </summary>
+      <param name="objectType">The type of the objects</param>
+      <returns>
+        <see langword="true" /> if the object can convert objects
+            of type <paramref name="objectType" />; otherwise <see langword="false" />.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.ComplexJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+      <summary>
+            Deserializes an object from JSON format.
+            </summary>
+      <param name="reader">The reader that contains the JSON.</param>
+      <param name="objectType">The type of the object to deserialize.</param>
+      <param name="existingValue">The pre-existing value of the object. Not used.</param>
+      <param name="serializer">The JSON serializer to use for the deserialization.</param>
+      <returns>The deserialized object.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.ComplexJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+      <summary>
+            Serializes an object to JSON.
+            </summary>
+      <param name="writer">The writer the serialized JSON is written to.</param>
+      <param name="value">The value to serialize.</param>
+      <param name="serializer">The JSON serializer to use for the serialization.</param>
+    </member>
+    <member name="T:Extreme.Data.Json.DataObjectJsonConverter">
+      <summary>
+            Converts data frames, vectors, matrices, and indexes to and from JSON.
+            </summary>
+    </member>
+    <member name="M:Extreme.Data.Json.DataObjectJsonConverter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Extreme.Data.Json.DataObjectJsonConverter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Extreme.Data.Json.DataObjectJsonConverter.CanConvert(System.Type)">
+      <summary>
+            Returns whether the object can convert objects of the specified type.
+            </summary>
+      <param name="objectType">The type of the objects</param>
+      <returns>
+        <see langword="true" /> if the object can convert objects
+            of type <paramref name="objectType" />; otherwise <see langword="false" />.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.DataObjectJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+      <summary>
+            Deserializes an object from JSON format.
+            </summary>
+      <param name="reader">The reader that contains the JSON.</param>
+      <param name="objectType">The type of the object to deserialize.</param>
+      <param name="existingValue">The pre-existing value of the object. Not used.</param>
+      <param name="serializer">The JSON serializer to use for the deserialization.</param>
+      <returns></returns>
+    </member>
+    <member name="M:Extreme.Data.Json.DataObjectJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+      <summary>
+            Serializes an object to JSON.
+            </summary>
+      <param name="writer">The writer the serialized JSON is written to.</param>
+      <param name="value">The value to serialize.</param>
+      <param name="serializer">The JSON serializer to use for the serialization.</param>
+    </member>
+    <member name="T:Extreme.Data.Json.JsonDataFrameLayout">
+      <summary>
+            Enumerates the possible JSON layouts of a data frame.
+            </summary>
+    </member>
+    <member name="F:Extreme.Data.Json.JsonDataFrameLayout.Default">
+      <summary>
+            The default layout is used. The object is stored as
+            a set of three properties: the row index, the column index, and
+            an array of columns.
+            </summary>
+    </member>
+    <member name="F:Extreme.Data.Json.JsonDataFrameLayout.Automatic">
+      <summary>
+            The layout is not specified and will be inferred from the data.
+            </summary>
+    </member>
+    <member name="F:Extreme.Data.Json.JsonDataFrameLayout.Split">
+      <summary>
+            The object is stored as a dictionary consisting of the
+            row index, the column index, and the values, 
+            each stored as lists.
+            </summary>
+    </member>
+    <member name="F:Extreme.Data.Json.JsonDataFrameLayout.Records">
+      <summary>
+            The object is stored as a list of dictionaries
+            that map column keys to values. The row index is discarded.
+            </summary>
+    </member>
+    <member name="F:Extreme.Data.Json.JsonDataFrameLayout.ByRows">
+      <summary>
+            The object is stored as a dictionary of row keys that map to dictionaries
+            of column keys that map to values.
+            </summary>
+    </member>
+    <member name="F:Extreme.Data.Json.JsonDataFrameLayout.ByColumns">
+      <summary>
+            The object is stored as a dictionary of column keys that map to dictionaries
+            of row keys that map to values.
+            </summary>
+    </member>
+    <member name="F:Extreme.Data.Json.JsonDataFrameLayout.ValuesOnly">
+      <summary>
+            Only the values are stored. The row and column index are discarded.
+            </summary>
+    </member>
+    <member name="T:Extreme.Data.Json.JsonFile">
+      <summary>
+            Contains methods for serializing and deserializing objects to and from JSON format.
+            </summary>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.Append(Newtonsoft.Json.JsonWriter,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Creates a JSON stream from an existing <see cref="T:Newtonsoft.Json.JsonWriter" />.
+            </summary>
+      <param name="writer">The <see cref="T:Newtonsoft.Json.JsonWriter" /> the data will be read from.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when formatting the JSON.</param>
+      <returns>A <see cref="T:Extreme.Data.Json.JsonStream" />.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.Append(System.IO.Stream,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Opens a data stream in JSON format for writing.
+            </summary>
+      <param name="stream">The stream to write to.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when writing the file.</param>
+      <returns>A <see cref="T:Extreme.Data.Json.JsonStream" />.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.Create(System.String,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Creates a data file in JSON format for writing.
+            </summary>
+      <param name="path">The path to the file.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when writing the file.</param>
+      <returns>A <see cref="T:Extreme.Data.Json.JsonStream" />.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.Open(Newtonsoft.Json.JsonReader,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Opens a JSON stream from an existing <see cref="T:Newtonsoft.Json.JsonReader" />.
+            </summary>
+      <param name="reader">The <see cref="T:Newtonsoft.Json.JsonReader" /> the data will be read from.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when interpreting the JSON.</param>
+      <returns>A <see cref="T:Extreme.Data.Json.JsonStream" />.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.Open(System.IO.Stream,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Opens a data stream in JSON format for reading.
+            </summary>
+      <param name="stream">The stream to read the data from.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <returns>A <see cref="T:Extreme.Data.Json.JsonStream" />.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.Open(System.String,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Opens a data file in JSON format for reading.
+            </summary>
+      <param name="path">The path to the file.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <returns>A <see cref="T:Extreme.Data.Json.JsonStream" />.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ReadComplexMatrix``1(System.IO.Stream,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Reads a complex matrix from a stream in JSON format.
+            </summary>
+      <param name="stream">A stream.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the matrix.</typeparam>
+      <returns>The matrix that was read from the stream
+            pointed to by <paramref name="stream" />.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ReadComplexMatrix``1(System.String,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Reads a complex matrix from a file in JSON format.
+            </summary>
+      <param name="path">The path to the file.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the matrix.</typeparam>
+      <returns>The data frame that was read from the file
+            pointed to by <paramref name="path" />.</returns>
+      <exception cref="T:System.IO.FileNotFoundException">
+            The specified file does not exist.</exception>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ReadComplexVector``1(System.IO.Stream,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Reads a complex vector from a stream in JSON format.
+            </summary>
+      <param name="stream">A stream.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the vector.</typeparam>
+      <returns>The vector that was read from the stream
+            pointed to by <paramref name="stream" />.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ReadComplexVector``1(System.String,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Reads a complex vector from a file in JSON format.
+            </summary>
+      <param name="path">The path to the file.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the vector.</typeparam>
+      <returns>The data frame that was read from the file
+            pointed to by <paramref name="path" />.</returns>
+      <exception cref="T:System.IO.FileNotFoundException">
+            The specified file does not exist.</exception>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ReadDataFrame``2(System.IO.Stream,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Reads a data frame from a stream in JSON format.
+            </summary>
+      <param name="stream">A stream.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="R">The type of the row keys of the data frame.</typeparam>
+      <typeparam name="C">The type of the column keys of the data frame.</typeparam>
+      <returns>The data frame that was read from the stream
+            pointed to by <paramref name="stream" />.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ReadDataFrame(System.IO.Stream,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Reads a data frame from a stream in JSON format.
+            </summary>
+      <param name="stream">A stream.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <returns>The data frame that was read from the stream
+            pointed to by <paramref name="stream" />.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ReadDataFrame``2(System.String,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Reads a data frame from a file in JSON format.
+            </summary>
+      <param name="path">The path to the file.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="R">The type of the row keys of the data frame.</typeparam>
+      <typeparam name="C">The type of the column keys of the data frame.</typeparam>
+      <returns>The data frame that was read from the file
+            pointed to by <paramref name="path" />.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ReadDataFrame(System.String,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Reads a data frame from a file in JSON format.
+            </summary>
+      <param name="path">The path to the file.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <returns>The data frame that was read from the file
+            pointed to by <paramref name="path" />.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ReadMatrix``1(System.IO.Stream,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Reads a matrix from a stream in JSON format.
+            </summary>
+      <param name="stream">A stream.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the matrix.</typeparam>
+      <returns>The matrix that was read from the stream
+            pointed to by <paramref name="stream" />.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ReadMatrix``1(System.String,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Reads a matrix from a file in JSON format.
+            </summary>
+      <param name="path">The path to the file.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the matrix.</typeparam>
+      <returns>The data frame that was read from the file
+            pointed to by <paramref name="path" />.</returns>
+      <exception cref="T:System.IO.FileNotFoundException">
+            The specified file does not exist.</exception>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ReadVector``1(System.IO.Stream,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Reads a vector from a stream in JSON format.
+            </summary>
+      <param name="stream">A stream.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the vector.</typeparam>
+      <returns>The vector that was read from the stream
+            pointed to by <paramref name="stream" />.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ReadVector``1(System.String,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Reads a vector from a file in JSON format.
+            </summary>
+      <param name="path">The path to the file.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the vector.</typeparam>
+      <returns>The data frame that was read from the file
+            pointed to by <paramref name="path" />.</returns>
+      <exception cref="T:System.IO.FileNotFoundException">
+            The specified file does not exist.</exception>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ToComplexMatrix``1(System.String,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Reads a complex matrix from a string in JSON format.
+            </summary>
+      <param name="jsonText">A string containing the serialized data frame.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the matrix.</typeparam>
+      <returns>The data frame that was read from <paramref name="jsonText" />.</returns>
+      <exception cref="T:System.IO.FileNotFoundException">
+            The specified file does not exist.</exception>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ToComplexVector``1(System.String,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Reads a complex vector from a string in JSON format.
+            </summary>
+      <param name="jsonText">A string containing the serialized data frame.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the vector.</typeparam>
+      <returns>The data frame that was read from <paramref name="jsonText" />.</returns>
+      <exception cref="T:System.IO.FileNotFoundException">
+            The specified file does not exist.</exception>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ToDataFrame``2(System.String,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Reads a data frame from a string in JSON format.
+            </summary>
+      <param name="jsonText">A string containing the serialized data frame.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="R">The type of the row keys of the data frame.</typeparam>
+      <typeparam name="C">The type of the column keys of the data frame.</typeparam>
+      <returns>The data frame that was read from <paramref name="jsonText" />.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ToDataFrame(System.String,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Reads a data frame from a string in JSON format.
+            </summary>
+      <param name="jsonText">A string containing the serialized data frame.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <returns>The data frame that was read from <paramref name="jsonText" />.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ToJson``2(Extreme.DataAnalysis.DataFrame{``0,``1},Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Returns a string containing the data frame in JSON format.
+            </summary>
+      <param name="dataFrame">The data frame to write to the stream.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="R">The type of the row keys of the data frame.</typeparam>
+      <typeparam name="C">The type of the column keys of the data frame.</typeparam>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ToJson``1(Extreme.Mathematics.Matrix{Extreme.Mathematics.Complex{``0}},Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Returns a string containing a complex matrix in JSON format.
+            </summary>
+      <param name="matrix">The matrix to write to the stream.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the matrix.</typeparam>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ToJson``1(Extreme.Mathematics.Matrix{``0},Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Returns a string containing a matrix in JSON format.
+            </summary>
+      <param name="matrix">The matrix to write to the stream.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the matrix.</typeparam>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ToJson``1(Extreme.Mathematics.Vector{Extreme.Mathematics.Complex{``0}},Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Returns a string containing a complex vector in JSON format.
+            </summary>
+      <param name="vector">The vector to write to the stream.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the vector.</typeparam>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ToJson``1(Extreme.Mathematics.Vector{``0},Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Returns a string containing a vector in JSON format.
+            </summary>
+      <param name="vector">The vector to write to the stream.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the vector.</typeparam>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ToMatrix``1(System.String,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Reads a matrix from a string in JSON format.
+            </summary>
+      <param name="jsonText">A string containing the serialized data frame.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the matrix.</typeparam>
+      <returns>The data frame that was read from <paramref name="jsonText" />.</returns>
+      <exception cref="T:System.IO.FileNotFoundException">
+            The specified file does not exist.</exception>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.ToVector``1(System.String,Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Reads a vector from a string in JSON format.
+            </summary>
+      <param name="jsonText">A string containing the serialized data frame.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the vector.</typeparam>
+      <returns>The data frame that was read from <paramref name="jsonText" />.</returns>
+      <exception cref="T:System.IO.FileNotFoundException">
+            The specified file does not exist.</exception>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.Write``2(System.IO.Stream,Extreme.DataAnalysis.DataFrame{``0,``1},Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Writes a data frame to a stream in JSON format.
+            </summary>
+      <param name="stream">A stream.</param>
+      <param name="dataFrame">The data frame to write to the stream.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="R">The type of the row keys of the data frame.</typeparam>
+      <typeparam name="C">The type of the column keys of the data frame.</typeparam>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.Write``1(System.IO.Stream,Extreme.Mathematics.Matrix{Extreme.Mathematics.Complex{``0}},Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Writes a complex matrix to a stream in JSON format.
+            </summary>
+      <param name="stream">A stream.</param>
+      <param name="matrix">The matrix to write to the stream.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the matrix.</typeparam>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.Write``1(System.IO.Stream,Extreme.Mathematics.Matrix{``0},Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Writes a matrix to a stream in JSON format.
+            </summary>
+      <param name="stream">A stream.</param>
+      <param name="matrix">The matrix to write to the stream.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the matrix.</typeparam>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.Write``1(System.IO.Stream,Extreme.Mathematics.Vector{Extreme.Mathematics.Complex{``0}},Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Writes a complex vector to a stream in JSON format.
+            </summary>
+      <param name="stream">A stream.</param>
+      <param name="vector">The vector to write to the stream.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the vector.</typeparam>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.Write``1(System.IO.Stream,Extreme.Mathematics.Vector{``0},Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Writes a vector to a stream in JSON format.
+            </summary>
+      <param name="stream">A stream.</param>
+      <param name="vector">The vector to write to the stream.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the vector.</typeparam>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.Write``2(System.String,Extreme.DataAnalysis.DataFrame{``0,``1},Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Writes a data frame to a file in JSON format.
+            </summary>
+      <param name="path">The path to the file.</param>
+      <param name="dataFrame">The data frame to write to the file.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="R">The type of the row keys of the data frame.</typeparam>
+      <typeparam name="C">The type of the column keys of the data frame.</typeparam>
+      <exception cref="T:System.IO.FileNotFoundException">
+            The specified file does not exist.</exception>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.Write``1(System.String,Extreme.Mathematics.Matrix{Extreme.Mathematics.Complex{``0}},Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Writes a complex matrix to a file in JSON format.
+            </summary>
+      <param name="path">The path to the file.</param>
+      <param name="matrix">The matrix to write to the file.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the matrix.</typeparam>
+      <exception cref="T:System.IO.FileNotFoundException">
+            The specified file does not exist.</exception>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.Write``1(System.String,Extreme.Mathematics.Matrix{``0},Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Writes a matrix to a file in JSON format.
+            </summary>
+      <param name="path">The path to the file.</param>
+      <param name="matrix">The matrix to write to the file.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the matrix.</typeparam>
+      <exception cref="T:System.IO.FileNotFoundException">
+            The specified file does not exist.</exception>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.Write``1(System.String,Extreme.Mathematics.Vector{Extreme.Mathematics.Complex{``0}},Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Writes a complex vector to a file in JSON format.
+            </summary>
+      <param name="path">The path to the file.</param>
+      <param name="vector">The vector to write to the file.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the vector.</typeparam>
+      <exception cref="T:System.IO.FileNotFoundException">
+            The specified file does not exist.</exception>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonFile.Write``1(System.String,Extreme.Mathematics.Vector{``0},Extreme.Data.Json.JsonOptions)">
+      <summary>
+            Writes a vector to a file in JSON format.
+            </summary>
+      <param name="path">The path to the file.</param>
+      <param name="vector">The vector to write to the file.</param>
+      <param name="options">A <see cref="T:Extreme.Data.Json.JsonOptions" /> object
+            that specifies the options to use when reading the file.</param>
+      <typeparam name="T">The element type of the vector.</typeparam>
+      <exception cref="T:System.IO.FileNotFoundException">
+            The specified file does not exist.</exception>
+    </member>
+    <member name="T:Extreme.Data.Json.JsonOptions">
+      <summary>
+            Represents the options available when reading and writing JSON files.
+            </summary>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonOptions.#ctor(System.IFormatProvider,System.Int32,System.Type,Extreme.Data.Json.JsonDataFrameLayout)">
+      <summary>Constructs a new set of options for delimited text files.</summary>
+      <param name="layout">Specifies the layout used to store data frames.</param>
+      <param name="formatProvider">An <see cref="T:System.IFormatProvider" /> that is used 
+            in the conversion between text and other data types.</param>
+      <param name="decimalType">The type to use for numbers containing decimals.</param>
+      <param name="inferenceRows">The number of rows to use to infer the types
+            of the columns.</param>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonOptions.ConfigureJsonSerializer(Newtonsoft.Json.JsonSerializer)">
+      <summary>
+            Configures a JSON.NET serializer to comply with the options
+            in the current JSON options object.
+            </summary>
+      <param name="serializer">The serializer to configure.</param>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonOptions.ConfigureJsonSerializerSettings(Newtonsoft.Json.JsonSerializerSettings)">
+      <summary>
+            Configures a JSON.NET serializer settings object to comply with the options
+            in the current JSON options object.
+            </summary>
+      <param name="settings">The settings to configure.</param>
+    </member>
+    <member name="F:Extreme.Data.Json.JsonOptions.Default">
+      <summary>
+            Gets the default options for JSON files.
+            </summary>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonOptions.GetSerializer">
+      <summary>
+            Returns a JSON.NET serializer that matches 
+            the current JSON options object.
+            </summary>
+      <returns>A JSON.NET serializer.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonOptions.GetSerializerSettings">
+      <summary>
+            Returns a JSON.NET serializer that matches 
+            the current JSON options object.
+            </summary>
+      <returns>A JSON.NET serializer.</returns>
+    </member>
+    <member name="P:Extreme.Data.Json.JsonOptions.Layout">
+      <summary>
+            Gets the layout used to store data frames in the data file.
+            </summary>
+    </member>
+    <member name="T:Extreme.Data.Json.JsonStream">
+      <summary>
+            Represents a data stream in JSON format.
+            </summary>
+    </member>
+    <member name="P:Extreme.Data.Json.JsonStream.CanRead">
+      <summary>
+            Gets whether the file can be read from.
+            </summary>
+    </member>
+    <member name="P:Extreme.Data.Json.JsonStream.CanWrite">
+      <summary>
+            Gets whether the file can be written to.
+            </summary>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonStream.Dispose(System.Boolean)">
+      <summary>
+            Releases resources.
+            </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>Extreme.Data.Json.JsonStream</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonStream.Flush">
+      <summary>
+            Causes any buffered data to be written to the underlying data store.
+            </summary>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonStream.ReadComplexMatrix``1(System.Boolean)">
+      <summary>
+            Reads a complex matrix from the stream.
+            </summary>
+      <param name="strict">Specifies whether the element type
+            should be matched exactly (<see langword="true" />), or whether
+            conversions are allowed (<see langword="false" />).</param>
+      <typeparam name="T">The type of the real and imaginary parts
+            of the element type.</typeparam>
+      <returns>The matrix that was read from the stream.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonStream.ReadComplexVector``1(System.Boolean)">
+      <summary>
+            Reads a complex vector from the stream.
+            </summary>
+      <param name="strict">Specifies whether the element type
+            should be matched exactly (<see langword="true" />), or whether
+            conversions are allowed (<see langword="false" />).</param>
+      <typeparam name="T">The type of the real and imaginary parts
+            of the element type.</typeparam>
+      <returns>The vector that was read from the stream.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonStream.ReadDataFrame``2">
+      <summary>
+            Reads the data frame at the current position in the file.
+            </summary>
+      <typeparam name="R">The type of the row keys of the data frame.</typeparam>
+      <typeparam name="C">The type of the column keys of the data frame.</typeparam>
+      <returns>A data frame containing the data.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonStream.ReadMatrix``1(System.Boolean)">
+      <summary>
+            Reads the two-dimensional array at the current position in the file.
+            </summary>
+      <param name="strict">Specifies whether the element type
+            should be matched exactly (<see langword="true" />), or whether
+            conversions are allowed (<see langword="false" />).</param>
+      <typeparam name="T">The element type of the matrix.</typeparam>
+      <returns>A matrix containing the data.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonStream.ReadVector``1(System.Boolean)">
+      <summary>
+            Reads the one-dimensional array at the current position in the file.
+            </summary>
+      <param name="strict">Specifies whether the element type
+            should be matched exactly (<see langword="true" />), or whether
+            conversions are allowed (<see langword="false" />).</param>
+      <typeparam name="T">The element type of the vector.</typeparam>
+      <returns>A vector containing the data.</returns>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonStream.Write``2(Extreme.DataAnalysis.DataFrame{``0,``1})">
+      <summary>
+            Writes the data frame at the current position in the file.
+            </summary>
+      <typeparam name="R">The type of the row keys of the data frame.</typeparam>
+      <typeparam name="C">The type of the column keys of the data frame.</typeparam>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonStream.Write``1(Extreme.Mathematics.Matrix{Extreme.Mathematics.Complex{``0}})">
+      <summary>
+            Writes a complex matrix to the stream.
+            </summary>
+      <typeparam name="T">The type of the real and imaginary parts
+            of the element type.</typeparam>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonStream.Write``1(Extreme.Mathematics.Matrix{``0})">
+      <summary>
+            Writes the two-dimensional array at the current position in the file.
+            </summary>
+      <typeparam name="T">The element type of the matrix.</typeparam>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonStream.Write``1(Extreme.Mathematics.Vector{Extreme.Mathematics.Complex{``0}})">
+      <summary>
+            Writes a complex vector to the stream.
+            </summary>
+      <typeparam name="T">The type of the real and imaginary parts
+            of the element type.</typeparam>
+    </member>
+    <member name="M:Extreme.Data.Json.JsonStream.Write``1(Extreme.Mathematics.Vector{``0})">
+      <summary>
+            Writes the one-dimensional array at the current position in the file.
+            </summary>
+      <typeparam name="T">The element type of the vector.</typeparam>
+    </member>
+  </members>
+</doc>
